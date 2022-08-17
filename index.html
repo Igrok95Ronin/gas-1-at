@@ -19,45 +19,38 @@ $title = $text . ' ' . $city;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <?= $site_data['html'] ?>
-    <title><?= $title ?></title>
+    <title>
+        <?= $title ?>
+    </title>
 </head>
 
 <body>
-
-
     <!--Шапка сайта-->
     <header class="header">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 container">
-                    <h1 class="header__title">header</h1><!-- + h1-h6. -->
+                    <div class="header__box">
+                        <div class="header__img">
+                            <img src="./assets/img/logo.png" alt="">
+                        </div>
+                        <a class="header__btn" href="#"><span>111222333</span></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Навигационные ссылки -->
-        <nav class="header-nav">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 container">...</div>
-                </div>
-            </div>
-        </nav>
     </header>
     <!-- Основное содержимое страницы -->
     <main class="main">
-        <h1 class="main__title">main</h1><!-- - h1-h6. -->
-        <!-- Раздел страницы-->
-        <section class="first-section">
-            <h2 class="first-section__title">section</h2><!-- + h2-h6... -->
-            <article class="first-article">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 container">
-                            <h2 class="first-article__title">article</h2><!-- + h2-h6... -->
-                        </div>
+        <section class="mainPicture">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 container">
+                        <h1 class="mainPicture__title">Systemwartung Gasleitung abdichten</h1>
+                        <div class="mainPicture__box"></div>
                     </div>
                 </div>
-            </article>
+            </div>
         </section>
     </main>
     <!--Нижний колонтитул страницы-->
