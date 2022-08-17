@@ -12,7 +12,7 @@ a{
 }
 ul,
 li{
-    list-style: none;
+
     margin: 0;
     padding: 0;
 }
@@ -25,10 +25,10 @@ body{
     outline: 1px solid red;
     margin: auto;
     padding: 0;
-    font: 15px Helvetica,Arial,sans-serif;
+    font: 16px Helvetica,Arial,sans-serif;
     max-width: 1920px;
     min-width: 320px;
-    color: #7a7a7a;
+    color: #444;
 }
 //header
 .header {
@@ -98,4 +98,62 @@ body{
     font-size: 40px;
     font-weight: 700;
     line-height: 1.5;
+}
+//seal
+.containerNoPadding{
+    padding: 0;
+}
+.seal__title {
+    text-align: center;
+    padding: 20px 12px;
+    background-color: $btnBgColor;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+}
+.seal__box {
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    padding: 30px 30px 14px;
+    margin: 30px 0;
+}
+.seal__text {
+    font-weight: 300;
+    line-height: 1.5;
+}
+//@at-root
+.verificationProcedure {
+    background-color: $sectionBgColor;
+    padding: 30px 0;
+}
+.verificationProcedure__box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.verificationProcedure__title {
+    font-size: 28px;
+    font-weight: 700;
+}
+.verificationProcedure__text {
+    font-weight: 300;
+    line-height: 1.5;
+}
+.verificationProcedure__ul{
+    padding-left: 20px;
+}
+.verificationProcedure__li {
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.verificationProcedure__right {
+    img{
+        width: 100%;
+        border-radius: 20px 0 20px 0;
+        height: 100%;
+    }
+}
+.greenLetter{
+    color: $btnBgColor;
 }
