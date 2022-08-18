@@ -1,7 +1,54 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../../assets/img/fonts/icomoon.eot?sgp31s');
+    src:  url('../../assets/img/fonts/icomoon.eot?sgp31s#iefix') format('embedded-opentype'),
+      url('../../assets/img/fonts/icomoon.ttf?sgp31s') format('truetype'),
+      url('../../assets/img/fonts/icomoon.woff?sgp31s') format('woff'),
+      url('../../assets/img/fonts/icomoon.svg?sgp31s#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-card:before {
+    content: "\e900";
+  }
+  .icon-thumbsup:before {
+    content: "\e901";
+  }
+  .icon-hourglass:before {
+    content: "\e902";
+  }
+  .icon-tools:before {
+    content: "\e903";
+  }
+
 $headerBgColor: #282828;
 $btnBgColor: #04b31e;
-$sectionBgColor: #f9f9f9;
+$sectionBgColor: #c9c1c1;
 $footerBgColor: #060606;
+
+@mixin border {
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    padding: 30px 30px 14px;
+    margin: 30px 0;
+}
 
 *{
     box-sizing: border-box;
@@ -29,6 +76,8 @@ body{
     max-width: 1920px;
     min-width: 320px;
     color: #444;
+    font-weight: 300;
+    line-height: 1.5;
 }
 //header
 .header {
@@ -112,16 +161,9 @@ body{
     font-weight: 700;
 }
 .seal__box {
-    border: 1px solid #E5E5E5;
-    border-radius: 3px;
-    padding: 30px 30px 14px;
-    margin: 30px 0;
+    @include border()
 }
-.seal__text {
-    font-weight: 300;
-    line-height: 1.5;
-}
-//@at-root
+//verificationProcedure
 .verificationProcedure {
     background-color: $sectionBgColor;
     padding: 30px 0;
@@ -134,10 +176,6 @@ body{
 .verificationProcedure__title {
     font-size: 28px;
     font-weight: 700;
-}
-.verificationProcedure__text {
-    font-weight: 300;
-    line-height: 1.5;
 }
 .verificationProcedure__ul{
     padding-left: 20px;
@@ -156,4 +194,95 @@ body{
 }
 .greenLetter{
     color: $btnBgColor;
+}
+.sealing {
+}
+.sealing__box {
+    @include border()
+}
+.sealing__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        max-width: 40px;
+        height: 3px;
+        background-color: $btnBgColor;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+//advantages
+.advantages {
+    background: url(../../assets/img/5b1eb4982669b_cortegas_slider.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 0;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+}
+.advantages__title {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 60px;
+}
+.advantages__box {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.advantages__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:nth-child(1)::before,
+    &:nth-child(2)::before,
+    &:nth-child(3)::before,
+    &:nth-child(4)::before {
+        content: "\e900";
+        font-family: 'icomoon';
+        position: absolute;
+        color: $btnBgColor;
+        font-size: 42px;
+        height: 42px;
+        top: 8%;
+    }
+    &:nth-child(2)::before {
+        content: "\e903";
+    }
+    &:nth-child(3)::before {
+        content: "\e901";
+    }
+    &:nth-child(4)::before {
+        content: "\e902";
+    }
+}
+.advantages__img {
+    outline: 3px solid $btnBgColor;
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+.advantages__dscr {
+    color: #fff;
+    text-align: center;
 }
