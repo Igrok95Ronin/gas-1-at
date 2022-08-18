@@ -385,10 +385,6 @@ body{
     @include line();
     margin-bottom: 60px;
 }
-.greenLetter {
-}
-.reviews__box {
-}
 .reviews__inner {
     padding: 20px;
     background-color: #FFF;
@@ -405,9 +401,6 @@ body{
     height: 64px;
     border-radius: 50%;
 }
-.reviews__wrapper{
-
-}
 .reviews__text {
     font-size: 18px;
     line-height: 1.8;
@@ -416,4 +409,26 @@ body{
 .reviews__name {
     font-size: 13px;
     font-weight: 600;
+}
+//forms
+.forms {
+    background-color: #1f1f1f;
+    padding: 60px 0;
+}
+.forms__box {
+    max-width: 80%;
+    margin: 0 auto;
+}
+.forms__title {
+    @include line();
+    color: #fff
+}
+.forms__button {
+    color: #fff;
+    background-color: $btnBgColor;
+    transition: all .3s ease-in-out;
+    &:hover {
+        color: #fff;
+        background-color: #045811;
+    }
 }
