@@ -47,7 +47,25 @@ $footerBgColor: #060606;
     border: 1px solid #E5E5E5;
     border-radius: 3px;
     padding: 30px 30px 14px;
-    margin: 30px 0;
+    margin: 60px 0;
+}
+@mixin line {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        max-width: 40px;
+        height: 3px;
+        background-color: $btnBgColor;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 *{
@@ -195,28 +213,11 @@ body{
 .greenLetter{
     color: $btnBgColor;
 }
-.sealing {
-}
 .sealing__box {
     @include border()
 }
 .sealing__title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        max-width: 40px;
-        height: 3px;
-        background-color: $btnBgColor;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    @include line();
 }
 //advantages
 .advantages {
@@ -285,4 +286,11 @@ body{
 .advantages__dscr {
     color: #fff;
     text-align: center;
+}
+//refresh
+.refresh__box {
+    @include border()
+}
+.refresh__title {
+    @include line();
 }
