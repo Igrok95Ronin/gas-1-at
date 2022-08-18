@@ -335,3 +335,45 @@ body{
     color: #333;
     line-height: 1.5;
 }
+//review
+.review {
+    padding-top: 30px;
+}
+.review__innet-title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 70px;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        max-width: 100px;
+        height: 3px;
+        background-color: $btnBgColor;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.review__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin: 0;
+}
+.review__img {
+    margin-bottom: 50px;
+    img{
+        width: 100%;
+    }
+}
+.review__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+}
+.review__name {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 23px;
+}
