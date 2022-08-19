@@ -50,11 +50,12 @@ $footerBgColor: #060606;
     margin: 60px 0;
 }
 @mixin line {
-    font-size: 28px;
+    font-size: clamp(22px,3vw,28px);
     font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
     position: relative;
+    margin-bottom: 40px;
     &::after {
         content: '';
         position: absolute;
@@ -118,7 +119,6 @@ li{
 }
 
 body{
-    outline: 1px solid red;
     margin: auto;
     padding: 0;
     font: 16px Helvetica,Arial,sans-serif;
@@ -165,7 +165,7 @@ body{
     color: #fff;
     text-align: center;
     padding: 200px 0;
-    font-size: 40px;
+    font-size: clamp(25px,3vw,40px);
     font-weight: 700;
     line-height: 1.5;
 }
@@ -178,7 +178,7 @@ body{
     padding: 20px 12px;
     background-color: $btnBgColor;
     color: #fff;
-    font-size: 32px;
+    font-size: clamp(22px,3vw,32px);
     font-weight: 700;
 }
 .seal__box {
@@ -195,7 +195,7 @@ body{
     gap: 30px;
 }
 .verificationProcedure__title {
-    font-size: 28px;
+    font-size: clamp(22px,3vw,28px);
     font-weight: 700;
 }
 .verificationProcedure__ul{
@@ -224,8 +224,9 @@ body{
 }
 //advantages
 .advantages {
-    background: url(../../assets/img/5b1eb4982669b_cortegas_slider.jpg);
+    background: url(../../assets/img/5b1eb4982669b_cortegas_slider.jpg) no-repeat;
     background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     padding: 80px 0;
     position: relative;
@@ -242,7 +243,7 @@ body{
     position: relative;
     color: #fff;
     text-align: center;
-    font-size: 32px;
+    font-size: clamp(22px,3vw,32px);
     font-weight: 700;
     line-height: 1.5;
     margin-bottom: 60px;
@@ -303,6 +304,7 @@ body{
 }
 .allComponents__title {
     @include line();
+    
 }
 .allComponents__btn {
     margin-top: 10px;
@@ -356,7 +358,7 @@ body{
     }
 }
 .review__title {
-    font-size: 28px;
+    font-size: clamp(22px,3vw,28px);
     font-weight: 700;
     margin-bottom: 20px;
     margin: 0;
@@ -439,4 +441,79 @@ body{
     color: #fff;
     line-height: 50px;
     font-weight: 700;
+}
+
+//Media
+@media(max-width: 1220px) {
+    .mainPicture__title {
+        padding: 150px 0;
+    }
+}
+@media(max-width: 999px) {
+    .verificationProcedure__box {
+        grid-template-columns: 1fr;
+    }
+    .verificationProcedure {
+        padding: 0 0 ;
+    }
+    .verificationProcedure__title {
+        margin-bottom: 30px;
+    }
+    .advantages__box {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 100px;
+    }
+    .services__box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 920px) {
+    .mainPicture {
+        background-position: center;
+    }
+}
+@media(max-width: 767px) {
+    .seal__box,
+    .refresh__box,
+    .sealing__box {
+        padding: 30px 10px 14px;
+    }
+
+    .advantages__box {
+        grid-template-columns: 1fr;
+        row-gap: 100px;
+    }
+    .refresh__title,
+    .sealing__title {
+        margin-bottom: 40px;
+    }
+    .services__box {
+        grid-template-columns: 1fr;
+    }
+    .review__items {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+    .review__name {
+        font-size: 22px;
+        text-align: center;
+    }
+    .review {
+        padding-top: 0px;
+    }
+    .forms__box {
+        max-width: 100%;
+    }
+}
+@media(max-width: 425px) {
+    .mainPicture__title {
+        padding: 100px 0;
+    }
+    .reviews__text {
+        font-size: 16px;
+    }
+    .reviews__inner {
+        flex-direction: column;
+        align-items: center;
+    }
 }
